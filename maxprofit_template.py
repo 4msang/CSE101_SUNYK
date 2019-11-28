@@ -31,7 +31,7 @@ for test_case in test_cases:
     try:
         print(solution(test_case))
     except:
-        print("Your code produces run-time error for this test.")
+        print("Your codes produced a run-time error for this test.")
 
 
 ######## Expected Output
