@@ -22,17 +22,30 @@ large_2 = [random.sample(first, k=1)[0] for i in range(200000)] + [random.sample
 third = [i for i in range(200000)]
 large_3 = [random.sample(third, k=1)[0] for i in range(200000)]
 
+test_cases = [example, v_pattern, simple_desc, simple_asc, empty, simple, two_hills,
+              max_profit_after_max_and_before_min, medium_1, large_1, large_2, large_3]
 
-######## Runs and Expected Output
-print(solution(example))  # 356
-print(solution(v_pattern))  # 30
-print(solution(simple_desc))  # 0
-print(solution(simple_asc))  # 40
-print(solution(empty))  # 0
-print(solution(simple))  # 200000
-print(solution(two_hills))  # 8
-print(solution(max_profit_after_max_and_before_min))  # 75
-print(solution(medium_1))  # 98
-print(solution(large_1))  # 98
-print(solution(large_2))  # random but should be close to 100,000
-print(solution(large_3))  # random but should be close to 200,000
+
+######## Runs
+for test_case in test_cases:
+    try:
+        print(solution(test_case))
+    except:
+        print("Your code produces run-time error for this test.")
+
+
+######## Expected Output
+"""
+356
+30
+0
+40
+0
+200000
+8
+75
+98
+98
+random but should be close to 100,000
+random but should be close to 200,000
+"""
